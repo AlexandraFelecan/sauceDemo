@@ -1,4 +1,4 @@
-package org.example.loginInterface;
+package org.example.tests.loginInterface;
 
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
