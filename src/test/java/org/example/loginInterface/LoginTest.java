@@ -90,8 +90,7 @@ public class LoginTest extends AbstractAcceptance {
      **/
 
     @Test
-    public void logout (){
-        openApplication();
+    public void logout() {
         openApplication();
         applicationManager.writeOnElement(Username_input, Standard_USER);
         applicationManager.writeOnElement(Password_input, Password);
