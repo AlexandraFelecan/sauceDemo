@@ -12,13 +12,15 @@ import java.util.List;
 
 public class WaitUtils {
 
+    public static int WAIT_TIMEOUT = 5;
+
     public static void checkVisibility(String selector, WebDriver driver) {
-        new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(selector)));
+        new WebDriverWait(driver, Duration.of(WAIT_TIMEOUT, ChronoUnit.SECONDS)).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(selector)));
 
     }
 
     public static void checkInvisibility(String selector, WebDriver driver) {
-        new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS)).until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(selector)));
+        new WebDriverWait(driver, Duration.of(WAIT_TIMEOUT, ChronoUnit.SECONDS)).until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(selector)));
     }
 
     public static void checkInvisibility(String selector, int waitTimeout, WebDriver driver) {
@@ -27,12 +29,12 @@ public class WaitUtils {
     }
 
     public static void elementLocatedWithText(String selector, String text, WebDriver driver) {
-        new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS)).until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(selector), text));
+        new WebDriverWait(driver, Duration.of(WAIT_TIMEOUT, ChronoUnit.SECONDS)).until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(selector), text));
     }
 
     public static void elementsLocatedWithText(String selector, String text, int index, WebDriver driver) {
         List<WebElement> elements = driver.findElements(By.cssSelector(selector));
-        new WebDriverWait(driver, Duration.of(10, ChronoUnit.SECONDS)).until(ExpectedConditions.textToBePresentInElement(elements.get(index), text));
+        new WebDriverWait(driver, Duration.of(WAIT_TIMEOUT, ChronoUnit.SECONDS)).until(ExpectedConditions.textToBePresentInElement(elements.get(index), text));
 
     }
 }
