@@ -13,7 +13,8 @@ import java.util.List;
 import java.util.Random;
 
 public class ApplicationManager {
-    private static WebDriver driver;
+    private WebDriver driver;
+
 
     // SELECTORS
     public static String Burger_MENU = "#react-burger-menu-btn";
