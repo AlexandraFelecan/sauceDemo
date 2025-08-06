@@ -9,4 +9,6 @@ public class MainPageManager {
     public static String items_name_list = ".inventory_item_name";
     public static String add_to_cart_buttons = ".btn_primary";
     public static String remove_btn = ".btn_secondary";
+    public static String product_name = ".inventory_details_name";
+    public static String product_photos = ".inventory_item_img a";
 }
