@@ -2,12 +2,13 @@ package org.example.tests.loginInterface;
 
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import static org.example.managers.ApplicationManager.Burger_MENU;
 import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.LoginManager.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends AbstractAcceptance {
 
