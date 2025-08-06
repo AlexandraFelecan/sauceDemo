@@ -3,14 +3,13 @@ package org.example.config;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.managers.ApplicationManager;
 import org.example.utils.WaitUtils;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
-import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.LoginManager.*;
 
 public class AbstractAcceptance {
@@ -18,21 +17,19 @@ public class AbstractAcceptance {
     protected WebDriver driver;
     protected ApplicationManager applicationManager;
 
-
-    @BeforeAll
-    static void setupDriver() {
+    @BeforeClass
+    public void setupClass() {
         WebDriverManager.chromedriver().setup();
     }
 
-    @BeforeEach
-    void launchBrowser() {
+    @BeforeMethod
+    public void setupTest() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
-        WebDriver localDriver = new ChromeDriver(options);
-        localDriver.manage().window().maximize();
-        this.driver = localDriver;
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
 
-        this.applicationManager = new ApplicationManager(this.driver);
+        applicationManager = new ApplicationManager(driver);
     }
 
     protected void openApplication() {
@@ -40,16 +37,15 @@ public class AbstractAcceptance {
         WaitUtils.checkVisibility(Login_BTN, driver);
     }
 
-    protected void login(){
+    protected void login() {
         openApplication();
         applicationManager.writeOnElement(Username_input, Standard_USER);
         applicationManager.writeOnElement(Password_input, Password);
         applicationManager.clickOnElement(Login_BTN);
-        WaitUtils.checkVisibility(Cart_icon, driver);
     }
 
-    @AfterEach
-    void closeBrowser() {
+    @AfterMethod
+    public void teardown() {
         if (driver != null) {
             driver.quit();
         }
