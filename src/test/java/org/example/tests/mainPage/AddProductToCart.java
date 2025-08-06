@@ -19,6 +19,7 @@ public class AddProductToCart extends AbstractAcceptance {
      * 2. Log in with valid user credentials.
      * 3. Click on the “Add to cart” button for a randomly selected product.
      * 4. Verify that the button’s text changes to “Remove”, confirming the product was added successfully.
+     * Expected result: The clicked button should update its label to “Remove”, indicating the product is now in the cart.
      */
     @Test
     public void addToCart() {
