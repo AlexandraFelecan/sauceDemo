@@ -21,6 +21,7 @@ public class FilterTest extends AbstractAcceptance {
      * * 3. Click the "Sort" button
      * * 4. Sort products by price in the specified order ("Price (low to high)" or "Price (high to low)")
      * * 5. Verify that products are displayed in the correct numerical order according to the chosen sort
+     * Expected result: Product prices should be displayed in the selected numerical order (ascending or descending).
      *
      * @param sorter
      */
@@ -57,7 +58,7 @@ public class FilterTest extends AbstractAcceptance {
      * 3. Click the "Sort" button
      * 4. Sort products by name in the specified order (ascending "Name (A to Z)" or descending "Name (Z to A)")
      * 5. Verify that products are displayed in the correct alphabetical order according to the chosen sort
-     *
+     * Expected result: Product names should be displayed in the selected alphabetical order (A–Z or Z–A).
      * @param sorter
      */
     @Test(dataProvider = "sortingByName", dataProviderClass = DataProviders.class)
