@@ -1,1 +1,1 @@
-https://github.com/AlexandraFelecan/Proiect_testare - proiect automation
+https://github.com/AlexandraFelecan/Proiect_testare - proiect testare manuala
