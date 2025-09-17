@@ -7,8 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-
-
 import java.util.List;
 import java.util.Random;
 
@@ -100,10 +98,12 @@ public class ApplicationManager {
         WebElement element = driver.findElement(By.cssSelector(selector));
         return (element.getAttribute(attribute));
     }
+
     public String getCSSValue(String selector, String attribute) {
         WebElement element = driver.findElement(By.cssSelector(selector));
         return element.getCssValue(attribute);
     }
+
     public String getCSSValue(String selector, String attribute, int index) {
         List<WebElement> elements = driver.findElements(By.cssSelector(selector));
         return (elements.get(index).getCssValue(attribute));
@@ -128,7 +128,7 @@ public class ApplicationManager {
         return Double.parseDouble(text.replaceAll("[^0-9]", ""));
     }
 
-    public int randomInt(int min, int max) {
+    public static int randomInt(int min, int max) {
         Random rand = new Random();
         return (rand.nextInt(max - min + 1) + min);
     }

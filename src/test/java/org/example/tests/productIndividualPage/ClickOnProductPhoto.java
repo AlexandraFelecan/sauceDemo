@@ -3,14 +3,18 @@ package org.example.tests.productIndividualPage;
 import org.example.config.AbstractAcceptance;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 import static org.example.managers.MainPageManager.*;
+import static org.example.utils.WaitUtils.WAIT_TIMEOUT;
 
-public class ProductPageByPhoto extends AbstractAcceptance {
+public class ClickOnProductPhoto extends AbstractAcceptance {
 
     /**
      * Validate navigation to product individual page via product image:
@@ -22,7 +26,7 @@ public class ProductPageByPhoto extends AbstractAcceptance {
      * Expected result: The product name displayed on the detail page matches the selected product.
      */
     @Test
-    public void clickOnProductPhoto(){
+    public void clickOnProductPhoto() {
         openApplication();
         login();
 
@@ -33,10 +37,10 @@ public class ProductPageByPhoto extends AbstractAcceptance {
 
         String expectedProductName = productNames.get(randomIndex).getText();
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT));
+        wait.until(ExpectedConditions.elementToBeClickable(productImages.get(randomIndex)));
         productImages.get(randomIndex).click();
 
-        WebElement productTitle = driver.findElement(By.cssSelector(product_name));
-
-        Assert.assertEquals(productTitle.getText(), expectedProductName, "Displayed product name doesn't match selected one.");
+        Assert.assertEquals(applicationManager.getTextOnElement(product_name), expectedProductName, "Displayed product name doesn't match selected one.");
     }
 }

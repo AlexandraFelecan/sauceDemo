@@ -59,6 +59,7 @@ public class FilterTest extends AbstractAcceptance {
      * 4. Sort products by name in the specified order (ascending "Name (A to Z)" or descending "Name (Z to A)")
      * 5. Verify that products are displayed in the correct alphabetical order according to the chosen sort
      * Expected result: Product names should be displayed in the selected alphabetical order (A–Z or Z–A).
+     *
      * @param sorter
      */
     @Test(dataProvider = "sortingByName", dataProviderClass = DataProviders.class)

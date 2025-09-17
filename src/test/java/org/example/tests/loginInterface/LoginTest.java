@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import static org.example.managers.ApplicationManager.Burger_MENU;
 import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.LoginManager.*;
-
 import static org.testng.Assert.assertEquals;
 
 public class LoginTest extends AbstractAcceptance {
