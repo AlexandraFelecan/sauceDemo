@@ -9,6 +9,8 @@ import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Cart_item;
 import static org.example.managers.MainPageManager.items_price_list;
 import static org.example.managers.MainPageManager.remove_btn;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class RemoveFromCartTest extends AbstractAcceptance {
 

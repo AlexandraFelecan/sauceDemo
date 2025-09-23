@@ -9,6 +9,8 @@ import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Continue_shopping_btn;
 import static org.example.managers.MainPageManager.items_price_list;
 import static org.example.managers.MainPageManager.sort_BTN;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class ContinueShoppingTest extends AbstractAcceptance {
 

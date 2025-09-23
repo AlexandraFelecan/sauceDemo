@@ -10,6 +10,8 @@ import java.util.List;
 
 import static org.example.managers.MainPageManager.add_to_cart_buttons;
 import static org.example.managers.MainPageManager.remove_btn;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class AddProductToCartTest extends AbstractAcceptance {
 

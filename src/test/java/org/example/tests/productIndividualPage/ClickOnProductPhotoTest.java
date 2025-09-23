@@ -13,6 +13,8 @@ import java.util.List;
 
 import static org.example.managers.MainPageManager.*;
 import static org.example.utils.WaitUtils.WAIT_TIMEOUT;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class ClickOnProductPhotoTest extends AbstractAcceptance {
 

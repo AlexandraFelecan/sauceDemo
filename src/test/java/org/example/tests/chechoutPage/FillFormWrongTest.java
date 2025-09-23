@@ -8,6 +8,8 @@ import static org.example.managers.CartManager.Checkout_btn;
 import static org.example.managers.CheckoutManager.*;
 import static org.example.managers.LoginManager.Error_msg;
 import static org.testng.Assert.assertEquals;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class FillFormWrongTest extends AbstractAcceptance {
     /**

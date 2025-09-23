@@ -9,6 +9,8 @@ import static org.example.managers.CartManager.Checkout_btn;
 import static org.example.managers.CheckoutManager.back_home_btn;
 import static org.example.managers.CheckoutManager.finish_btn;
 import static org.example.managers.MainPageManager.sort_BTN;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class GoBackHomeTest extends AbstractAcceptance {
     /**

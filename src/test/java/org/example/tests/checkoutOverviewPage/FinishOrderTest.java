@@ -8,6 +8,8 @@ import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Checkout_btn;
 import static org.example.managers.CheckoutManager.finish_btn;
 import static org.example.managers.CheckoutManager.order_complete_msg;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class FinishOrderTest extends AbstractAcceptance {
     /**

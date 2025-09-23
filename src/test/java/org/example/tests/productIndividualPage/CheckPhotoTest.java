@@ -10,6 +10,8 @@ import java.util.List;
 
 import static org.example.managers.MainPageManager.product_img;
 import static org.example.managers.MainPageManager.product_photos;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class CheckPhotoTest extends AbstractAcceptance {
 

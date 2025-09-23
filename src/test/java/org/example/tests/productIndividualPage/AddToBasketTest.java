@@ -6,6 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.example.managers.MainPageManager.*;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class AddToBasketTest extends AbstractAcceptance {
 

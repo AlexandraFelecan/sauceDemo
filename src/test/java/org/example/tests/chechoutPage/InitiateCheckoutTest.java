@@ -9,6 +9,8 @@ import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Checkout_btn;
 import static org.example.managers.CheckoutManager.first_name_input;
 import static org.example.managers.MainPageManager.items_price_list;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class InitiateCheckoutTest extends AbstractAcceptance {
 

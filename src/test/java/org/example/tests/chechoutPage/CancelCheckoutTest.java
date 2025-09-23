@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import static org.example.managers.CartManager.*;
 import static org.example.managers.CheckoutManager.cancel_btn;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class CancelCheckoutTest extends AbstractAcceptance {
 

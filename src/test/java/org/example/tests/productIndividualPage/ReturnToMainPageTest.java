@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import static org.example.managers.MainPageManager.back_to_products;
 import static org.example.managers.MainPageManager.sort_BTN;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class ReturnToMainPageTest extends AbstractAcceptance {
 

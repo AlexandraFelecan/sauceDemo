@@ -9,6 +9,8 @@ import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Checkout_btn;
 import static org.example.managers.MainPageManager.items_name_list;
 import static org.example.managers.MainPageManager.product_name;
+import org.testng.annotations.Listeners;
+@Listeners(org.example.listeners.ExtentListener.class)
 
 public class GoToProductPageFromCheckoutTest extends AbstractAcceptance {
     /**
