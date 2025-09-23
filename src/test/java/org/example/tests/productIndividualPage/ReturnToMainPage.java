@@ -15,7 +15,7 @@ public class ReturnToMainPage extends AbstractAcceptance {
      * 2. Login with valid credentials
      * 3. Click on a random product name
      * 4. Click the "Back to products" button
-     *
+     * <p>
      * Expected result: User is redirected back to the main products page.
      */
 
