@@ -5,10 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import static org.example.managers.MainPageManager.add_to_cart_buttons;
 
 public class CartManager extends AbstractAcceptance {
 
