@@ -2,29 +2,26 @@ package org.example.tests.cartPage;
 
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Continue_shopping_btn;
-import static org.example.managers.MainPageManager.*;
+import static org.example.managers.MainPageManager.items_price_list;
+import static org.example.managers.MainPageManager.sort_BTN;
 
 public class ContinueShopping extends AbstractAcceptance {
 
     /**
      * Continue shopping from the cart.
-     *
+     * <p>
      * Steps:
      * 1. Access the application.
      * 2. Log in with valid credentials.
      * 3. Add a random product to the cart and open the cart.
      * 4. Verify the product price matches the main page.
      * 5. Click "Continue Shopping" button.
-     *
+     * <p>
      * Expected result:
      * Successful redirection to the main page of the application.
      */
