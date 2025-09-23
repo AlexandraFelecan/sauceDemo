@@ -17,7 +17,7 @@ public class BackToProducts extends AbstractAcceptance {
      * 4. Click the cart icon
      * 5. Open the burger menu and click "All items"
      * 6. Wait for the main page to load (sort button visible)
-     *
+     * <p>
      * Expected result: User is successfully redirected back to the main products page.
      */
 
