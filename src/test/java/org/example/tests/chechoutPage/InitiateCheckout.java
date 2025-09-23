@@ -14,7 +14,7 @@ public class InitiateCheckout extends AbstractAcceptance {
 
     /**
      * Verify that a user can initiate the checkout process from the cart.
-     *
+     * <p>
      * Steps:
      * 1. Access the application.
      * 2. Log in with valid credentials.
@@ -22,13 +22,13 @@ public class InitiateCheckout extends AbstractAcceptance {
      * 4. Open the cart and verify the product price matches.
      * 5. Click the "Checkout" button.
      * 6. Wait for the checkout page to load (first name input visible).
-     *
+     * <p>
      * Expected result:
      * The user is successfully redirected to the checkout page.
      */
 
     @Test
-    public void initiate_checkout(){
+    public void initiate_checkout() {
         openApplication();
         login();
         String expectedPrice = cartManager.addToCart();
