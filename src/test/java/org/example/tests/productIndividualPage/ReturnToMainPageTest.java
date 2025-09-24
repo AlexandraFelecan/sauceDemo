@@ -2,11 +2,12 @@ package org.example.tests.productIndividualPage;
 
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.managers.MainPageManager.back_to_products;
 import static org.example.managers.MainPageManager.sort_BTN;
-import org.testng.annotations.Listeners;
+
 @Listeners(org.example.listeners.ExtentListener.class)
 
 public class ReturnToMainPageTest extends AbstractAcceptance {
