@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -13,7 +14,7 @@ import java.util.List;
 
 import static org.example.managers.MainPageManager.*;
 import static org.example.utils.WaitUtils.WAIT_TIMEOUT;
-import org.testng.annotations.Listeners;
+
 @Listeners(org.example.listeners.ExtentListener.class)
 
 public class ClickOnProductPhotoTest extends AbstractAcceptance {
