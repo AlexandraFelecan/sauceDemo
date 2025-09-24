@@ -4,13 +4,14 @@ import org.example.config.AbstractAcceptance;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.List;
 
 import static org.example.managers.MainPageManager.add_to_cart_buttons;
 import static org.example.managers.MainPageManager.remove_btn;
-import org.testng.annotations.Listeners;
+
 @Listeners(org.example.listeners.ExtentListener.class)
 
 public class AddProductToCartTest extends AbstractAcceptance {
