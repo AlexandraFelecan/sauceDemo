@@ -3,10 +3,11 @@ package org.example.tests.productIndividualPage;
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.managers.MainPageManager.*;
-import org.testng.annotations.Listeners;
+
 @Listeners(org.example.listeners.ExtentListener.class)
 
 public class AddToBasketTest extends AbstractAcceptance {
