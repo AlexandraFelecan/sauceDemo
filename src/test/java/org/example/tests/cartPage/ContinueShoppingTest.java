@@ -3,13 +3,14 @@ package org.example.tests.cartPage;
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Continue_shopping_btn;
 import static org.example.managers.MainPageManager.items_price_list;
 import static org.example.managers.MainPageManager.sort_BTN;
-import org.testng.annotations.Listeners;
+
 @Listeners(org.example.listeners.ExtentListener.class)
 
 public class ContinueShoppingTest extends AbstractAcceptance {
