@@ -56,8 +56,4 @@ public class ApplicationManager {
         Select select = new Select(element);
         select.selectByVisibleText(value);
     }
-
-    public int getElementsSize(String selector) {
-        return driver.findElements(By.cssSelector(selector)).size();
-    }
 }
