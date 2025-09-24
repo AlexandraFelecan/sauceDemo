@@ -19,7 +19,6 @@ import static org.example.managers.LoginManager.*;
 public class AbstractAcceptance {
 
     protected WebDriver driver;
-
     protected ApplicationManager applicationManager;
     protected MainPageManager mainPageManager;
     protected CartManager cartManager;
