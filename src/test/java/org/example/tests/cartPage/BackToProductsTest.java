@@ -2,11 +2,12 @@ package org.example.tests.cartPage;
 
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.MainPageManager.*;
-import org.testng.annotations.Listeners;
+
 @Listeners(org.example.listeners.ExtentListener.class)
 
 public class BackToProductsTest extends AbstractAcceptance {
