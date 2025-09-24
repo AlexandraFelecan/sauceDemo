@@ -2,13 +2,14 @@ package org.example.tests.checkoutOverviewPage;
 
 import org.example.config.AbstractAcceptance;
 import org.example.utils.WaitUtils;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.example.managers.CartManager.Cart_icon;
 import static org.example.managers.CartManager.Checkout_btn;
 import static org.example.managers.CheckoutManager.cancel_btn;
 import static org.example.managers.MainPageManager.sort_BTN;
-import org.testng.annotations.Listeners;
+
 @Listeners(org.example.listeners.ExtentListener.class)
 
 public class CancelOrderTest extends AbstractAcceptance {
