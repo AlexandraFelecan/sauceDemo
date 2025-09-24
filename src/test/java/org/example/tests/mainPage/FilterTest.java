@@ -5,8 +5,8 @@ import org.example.utils.DataProviders;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -23,7 +23,6 @@ public class FilterTest extends AbstractAcceptance {
      * * 4. Sort products by price in the specified order ("Price (low to high)" or "Price (high to low)")
      * * 5. Verify that products are displayed in the correct numerical order according to the chosen sort
      * Expected result: Product prices should be displayed in the selected numerical order (ascending or descending).
-     *
      */
     @Test(dataProvider = "sortingByPrice", dataProviderClass = DataProviders.class)
     public void sortingByPrice(String sorter) {
